@@ -6,7 +6,7 @@ master <- read.csv("Master.csv", stringsAsFactors = FALSE)
 salary <- read.csv("salaries.csv", stringsAsFactors = FALSE)
 pitching <- read.csv("pitching.csv", stringsAsFactors = FALSE)
 
-master <- subset(master, throws == "L")
+
 master$finalGame <- as.Date(master$finalGame, "%m/%d/%Y")
 
 master <- subset(master, master$year >=2005)
