@@ -8,6 +8,8 @@ pitching <- read.csv("pitching.csv", stringsAsFactors = FALSE)
 
 
 master$finalGame <- as.Date(master$finalGame, "%m/%d/%Y")
+master$year <- year(master$finalGame)
+
 
 master <- subset(master, master$year >=2005)
 pitching <- subset(pitching, pitching$year >=2005)
