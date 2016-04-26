@@ -26,3 +26,4 @@ master$player_id <- master$playerID
 
 df <- merge(df, master, by=c("year", "player_id"))
 
+df$throw <- df$throws.y
