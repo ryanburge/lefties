@@ -5,4 +5,4 @@ Using data from Kaggle, I am going to try and determine in left handed pitchers 
 
 ![alt tag](https://raw.githubusercontent.com/ryanburge/lefties/master/leftVright.png)
 
-
+![alt tag](https://raw.githubusercontent.com/ryanburge/lefties/master/scatter.png)
