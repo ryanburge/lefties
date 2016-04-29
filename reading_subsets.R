@@ -2,7 +2,7 @@ setwd("D:/Baseball")
 
 library(lubridate)
 
-master <- read.csv("Master.csv", stringsAsFactors = FALSE)
+master <- read.csv("D:/Baseball/Master.csv", stringsAsFactors = FALSE)
 salary <- read.csv("salaries.csv", stringsAsFactors = FALSE)
 pitching <- read.csv("pitching.csv", stringsAsFactors = FALSE)
 
