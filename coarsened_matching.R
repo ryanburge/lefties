@@ -1,6 +1,7 @@
 library(cem)
-cem <- select(cem, salary, w, l, g, gs, sv, ipouts, h, er, bb, so, ba, era, treated)
-cem <- data.frame(na.omit(df))
+cem <- df
+cem <- select(cem, salary, w, l, g, gs, sv, ipouts, h, er, bb, so, baopp, era, treated)
+cem <- data.frame(na.omit(cem))
 
 cem$treated = recode(cem$throws, "'L'=1; 'R'=0;", as.factor.result=FALSE)
 
@@ -26,8 +27,6 @@ cem$walks <- recode(cem$bb, "0:5= 1; 6:10 =2; 11:15=3; 16:20 =4; 25:30 =5; 31:88
 cem$bb <- NULL
 
 mat <- cem(treatment = "treated", data = cem, drop = "salary", keep.all=TRUE)
-tab <- relax.cem(mat, cem, depth=1, perc=0.3)
-mat
 est <- att(mat, salary ~ treated, data = cem)
 est
 
